@@ -1,10 +1,11 @@
-FROM debian:latest
-MAINTAINER examples@docker.com
+FROM ubunut:latest
 
-RUN apt-get update && apt-get install -y openssh-server apache2 supervisor
-RUN mkdir -p /var/lock/apache2 /var/run/apache2 /var/run/sshd /var/log/supervisor
+MAINTAINER XtremXpert <xtremxpert@xtremxpert.com>
+
+RUN apt-get update && apt-get install -y openssh-server supervisor
+RUN mkdir -p /var/run/sshd /var/log/supervisor
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
-EXPOSE 22 80
+EXPOSE 22
 CMD ["/usr/bin/supervisord"]
