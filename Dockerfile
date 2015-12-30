@@ -1,4 +1,4 @@
-FROM ubunut:latest
+FROM xtremxpert/docker-supervisord:ubuntu
 
 MAINTAINER XtremXpert <xtremxpert@xtremxpert.com>
 
