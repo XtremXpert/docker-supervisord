@@ -1,4 +1,4 @@
-FROM debian:latest
+FROM xtremxpert/docker-base:alpine
 MAINTAINER examples@docker.com
 
 RUN apt-get update && apt-get install -y openssh-server apache2 supervisor
