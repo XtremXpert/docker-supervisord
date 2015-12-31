@@ -14,4 +14,4 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 EXPOSE 22
 
-CMD ["/usr/bin/supervisord"]
+ENTRYPOINT ["supervisord", "--nodaemon", "--configuration", "/etc/supervisord.conf"]
