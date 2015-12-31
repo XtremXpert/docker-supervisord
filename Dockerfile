@@ -10,7 +10,7 @@ RUN apk update && \
 
 RUN mkdir -p /var/run/sshd /var/log/supervisor
 
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY supervisord.conf /etc/supervisord.conf
 
 EXPOSE 22
 
